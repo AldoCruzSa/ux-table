@@ -11,7 +11,7 @@ function App() {
       <div style={{margin: 15}}>
         <Routes>
           <Route path="/about" element={<About />} />
-          <Route path="/" element={<Conversor />} />
+          <Route path="/ux-table" element={<Conversor />} />
         </Routes>
       </div>
     </Router>
