@@ -402,7 +402,7 @@ export function Conversor2() {
                   marginTop: "10px",
                 }}
               >
-                Equipment Categorization Nomenclature
+                Standard Equipment Configurator
               </p>
               </TableCell>
             </TableRow>

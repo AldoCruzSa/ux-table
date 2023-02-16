@@ -127,18 +127,6 @@ const type_of_line = [
 
 const type_of_line_2 = [
   {
-    name: "Multi Display",
-    value: "M",
-  },
-  {
-    name: "Single Display",
-    value: "S",
-  },
-  {
-    name: "Pillar to Pillar Display",
-    value: "P",
-  },
-  {
     name: "HUD 1.8\" / 2.6\"",
     value: "A",
   },
@@ -203,42 +191,6 @@ const technology = [
 ];
 
 const technology_2 = [
-  {
-    name: "Display Closing Line",
-    value: "T01",
-  },
-  {
-    name: "Display Backlight Assembly Line",
-    value: "T02",
-  },
-  {
-    name: "Matrix Backlight Assembly",
-    value: "T03",
-  },
-  {
-    name: "Hybrid Bonding Line",
-    value: "T04",
-  },
-  {
-    name: "Display Wet Bonding Line",
-    value: "T05",
-  },
-  {
-    name: "Display Dry Bonding Line",
-    value: "T06",
-  },
-  {
-    name: "Display Testing Line",
-    value: "T07",
-  },
-  {
-    name: "Electronic Final Assembly",
-    value: "T08",
-  },
-  {
-    name: "Display Final Assembly",
-    value: "T09",
-  },
   {
     name: "TFT PGU",
     value: "T10",
@@ -459,7 +411,7 @@ export function Conversor() {
                     marginTop: "10px",
                   }}
                 >
-                  Standard nomenclature Configurator
+                  Standard Line Configurator
                 </p>
               </TableCell>
             </TableRow>
