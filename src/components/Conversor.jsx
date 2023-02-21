@@ -37,11 +37,20 @@ function getStyles(name, personName, theme) {
   };
 }
 
-function CopyButton({ text1, text2, text3, text4, text5, text6, text7, text8 }) {
+function CopyButton({
+  text1,
+  text2,
+  text3,
+  text4,
+  text5,
+  text6,
+  text7,
+  text8,
+}) {
   const [copied, setCopied] = useState(false);
   const nomenclature = `${text1}-${text2}
   ${text3}-${text4}-${text5}-${text6}-${text7}-
-  ${text8}`
+  ${text8}`;
 
   const handleCopy = () => {
     setCopied(true);
@@ -127,11 +136,11 @@ const type_of_line = [
 
 const type_of_line_2 = [
   {
-    name: "HUD 1.8\" / 2.6\"",
+    name: 'HUD 1.8" / 2.6"',
     value: "A",
   },
   {
-    name: "HUD 3.1\"",
+    name: 'HUD 3.1"',
     value: "B",
   },
   {
@@ -195,6 +204,11 @@ const technology_2 = [
     name: "TFT PGU",
     value: "T10",
   },
+  { name: "PGU display BUY", value: "T11" },
+  { name: "PGU display MAKE", value: "T12" },
+  { name: "Top Cover Assy", value: "T13" },
+  { name: "Mirror assy", value: "T14" },
+  { name: "Final Assemby", value: "T15" },
 ];
 
 const version_line = [
@@ -530,22 +544,24 @@ export function Conversor() {
                       <MenuItem disabled value="">
                         <em>Select</em>
                       </MenuItem>
-                      {productGroup == "HUD" && type_of_line_2.map((product) => (
-                        <MenuItem
-                          value={product.value}
-                          style={getStyles(product.name, typeOfLine, theme)}
-                        >
-                          {product.name}
-                        </MenuItem>
-                      ))}
-                      {productGroup != "HUD" && type_of_line.map((product) => (
-                        <MenuItem
-                          value={product.value}
-                          style={getStyles(product.name, typeOfLine, theme)}
-                        >
-                          {product.name}
-                        </MenuItem>
-                      ))}
+                      {productGroup == "HUD" &&
+                        type_of_line_2.map((product) => (
+                          <MenuItem
+                            value={product.value}
+                            style={getStyles(product.name, typeOfLine, theme)}
+                          >
+                            {product.name}
+                          </MenuItem>
+                        ))}
+                      {productGroup != "HUD" &&
+                        type_of_line.map((product) => (
+                          <MenuItem
+                            value={product.value}
+                            style={getStyles(product.name, typeOfLine, theme)}
+                          >
+                            {product.name}
+                          </MenuItem>
+                        ))}
                     </Select>
                   </FormControl>
                 </div>
@@ -604,22 +620,24 @@ export function Conversor() {
                       <MenuItem disabled value="">
                         <em>Select</em>
                       </MenuItem>
-                      {productGroup == "HUD" && technology_2.map((product) => (
-                        <MenuItem
-                          value={product.value}
-                          style={getStyles(product.name, tech, theme)}
-                        >
-                          {product.name}
-                        </MenuItem>
-                      ))}
-                      {productGroup != "HUD" && technology.map((product) => (
-                        <MenuItem
-                          value={product.value}
-                          style={getStyles(product.name, tech, theme)}
-                        >
-                          {product.name}
-                        </MenuItem>
-                      ))}
+                      {productGroup == "HUD" &&
+                        technology_2.map((product) => (
+                          <MenuItem
+                            value={product.value}
+                            style={getStyles(product.name, tech, theme)}
+                          >
+                            {product.name}
+                          </MenuItem>
+                        ))}
+                      {productGroup != "HUD" &&
+                        technology.map((product) => (
+                          <MenuItem
+                            value={product.value}
+                            style={getStyles(product.name, tech, theme)}
+                          >
+                            {product.name}
+                          </MenuItem>
+                        ))}
                     </Select>
                   </FormControl>
                 </div>
@@ -760,18 +778,17 @@ export function Conversor() {
           </TableBody>
           <TableRow>
             <TableCell align="center" colSpan={12}>
-              <div style={{margin: "15px"}}>
-
-              <CopyButton
-                text1={ productGroup }
-                text2={ typeOfLine }
-                text3={ standardLevel }
-                text4={ tech }
-                text5={ versionLine }
-                text6={ number }
-                text7={ automation }
-                text8={ version }
-              />
+              <div style={{ margin: "15px" }}>
+                <CopyButton
+                  text1={productGroup}
+                  text2={typeOfLine}
+                  text3={standardLevel}
+                  text4={tech}
+                  text5={versionLine}
+                  text6={number}
+                  text7={automation}
+                  text8={version}
+                />
               </div>
             </TableCell>
           </TableRow>
