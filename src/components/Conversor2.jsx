@@ -456,7 +456,15 @@ export function Conversor2() {
               <StyledTableCell
                 align="center"
               >
-                QTY of modules used
+                [02:27 p. m.] Cruz-Robles, Emmanuel
+
+
+
+
+Level of standardization 
+
+
+
                 <p style={{ display: "flex", justifyContent: "center" }}>(8)</p>
               </StyledTableCell>
             </TableRow>
